@@ -1,0 +1,171 @@
+### Tópicos
+- Como avaliar uma linguagem
+- Arquitetura de Von Neumann
+- Graus de Abstração
+- Tipos de Paradigmas
+- Linguagem Compilada x interpretada
+- Vinculação
+- Tipo de dados
+- Operador e Operando
+- Expressões
+- Sintaxe
+- Semântica
+
+### Como avaliar uma linguagem
+
+Legibilidade, Facilidade de Escrita, Confiabilidade, Custo, Portabilidade
+
+#### Legibilidade
+O quanto o código é escrito é fácil de escrever de entender por humanos.
+
+#### Facilidade de Escrita
+O quão rápido e direto você consegue traduzir uma ideia em código funcional.
+
+#### Confiabilidade 
+O quanto vc pode confiar que o código vai rodar certo, mesmo em condições adversar. Se falhar, falha com clareza, se funcionar, funciona sempre.
+
+#### Custo
+É o peso total de usá-la. Como:
+- Tempo pra aprender
+    
+- Tempo pra desenvolver
+    
+- Custo de manutenção
+    
+- Custo de runtime (infra)
+    
+- Custo humano (devs, suporte, bugs)
+
+#### Portabilidade
+Capacidade de rodar o mesmo código em diferentes plataformas (SO, arquitetura, HardWare) sem reescrever nada ou quase nada.
+
+### Arquitetura de Von Neumann
+Base dos computadores de modernos. 
+
+#### Componentes principais
+1. Memória 
+	- Armazena dados e instruções (juntos ao mesmo lugar)
+2. Unidade Lógica Aritmética (ULA)
+	- Faz cálculos e decisões lógicas
+3. Unidade de Controle
+	- Lê instruções da memória e comanda o que a ULA e a memória devem fazer.
+4. Registradores
+	- Pequena memória interna do processador, ultrarrápida.
+5. Barramento (Bus)
+	- Caminho por onde trafegam os dados, instruções e endereços.
+
+#### Graus de abstração
+Alto, média e baixo nível
+
+Nível de proximidade ou distanciamento do hardware real. Quanto mais alto o grau, menos você se preocupa com detalhes físicos. Quanto mais baixo, mais você fala direto com a máquina. 
+
+#### Tipos de Paradigmas
+
+Estilos ou modelos mentais que moldam como você resolve problemas com código.
+
+Imperativo
+- Você dá ordens passo a passo.
+Declarativo
+- Você diz o que quer, não como fazer.
+Funcional
+- Usa funções puras, sem estado, sem efeito colaterais
+Orientada a Objeto (OOP)
+- Você modela o mundo com objetos que têm estado e comportamento.
+Lógico
+- Você define regras e fatos, o sistema deduz resposta.
+Concorrente / Paralelo
+- Executa várias coisas ao mesmo tempo. 
+
+### Linguagem Compilada X Interpretada
+
+#### Compilada
+Tradução ANTES da execução 
+Código-fonte -> compilador -> código de máquina (binário)
+
+Vantagem
+- Alta performance
+- Detecção de erros antes de rodar
+- Segurança e otimização
+
+Desvantagem
+- Ciclo de desenvolvimento mais lento
+- Menos flexível em tempo real
+
+Exemplos
+- C, C++, Rust, Go, Swift, Java (meio termo: compilado pra bytecode)
+#### Interpretada
+- Tradução DURANTE a execução
+- Código é lido linha por linha por um interpretador
+- Roda mais devagar, mas começa instantâneo
+
+Vantagens
+- Desenvolvimento rápido (testa na hora)
+- Portabilidade (roda onde tiver o interpretador)
+
+Desvantagem
+- Performance inferior
+- Mais propenso a erros em tempo de execução
+
+Exemplo
+- Python, JavaScript, Ruby, PHP, Lua
+
+
+### Vinculação
+É o processo de associar um nome a alguma coisa: valor, tipo, endereço de memória, função, etc.
+
+Vinculação Estática
+- A associação acontece antes do programa rodar.
+- Mais rápida e segura (erros detectados antes).
+
+Vinculação Dinâmica
+- A associação acontece enquanto o programa está rodando.
+- Mais flexível, mas mais lenta e propensa a erro.
+
+#### Declaração explícita X implícita
+Como vc define variáveis, funções ou tipos num código - se vc fala tudo ou se o compilador adivinha.
+
+Explícita
+- Você diz exatamente o que está declarando
+Características
+- Você define o tipo, nome e valor.
+- Mais seguro, o compilador sabe o que esperar.
+- Mais verboso, mas mais claro.
+
+Implícita
+Você não declara tudo diretamente. O compilador/interpretador deduz o que você quis dizer
+Características
+- Menos verboso, mas menos explícito.
+- Depende de inferência de tipo ou contexto.
+- Pode causar erro se o compilador/interpretador entender errado.
+
+### Tipos de dados
+Define tamanho, operações válidas e como a memória será usada.
+
+- Base do sistema
+- Modificadores
+- Tipos derivados
+- Tipos abstratos e definidos pelo usuário
+
+### Operando e Operador
+
+#### Operando
+- É o valor ou variável que sofre a operação.
+
+#### Operador
+- É o símbolo que faz a operação em cima dos operandos.
+
+### Expressões 
+É qualquer combinação de operando e operadores que produz um valor.
+
+#### Toda expressão tem:
+- Operadores -> o que faz a ação
+- Operandos -> os dados sobre os quais a ação é feita
+- Resultado -> Valor calculado (ou efeito colateral, no caso de atribuições ou chamadas de função)
+
+### Sintaxe
+É a gramática do código. Define o que pode ou não ser escrito, e em que ordem.
+*Sintaxe = regras que dizem como escrever o código.*  
+Errou na sintaxe? *Compilador ou interpretador grita*.
+
+### Semântica
+A semântica trata de que o código faz de verdade. Ou o significado das instruções, expressões e unidades de um programa
